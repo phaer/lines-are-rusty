@@ -118,6 +118,10 @@ pub enum Color {
     White,
     Blue,
     Red,
+    Yellow,
+    Green,
+    Pink,
+    GrayOverlapping
 }
 
 impl TryFrom<i32> for Color {
@@ -128,8 +132,13 @@ impl TryFrom<i32> for Color {
             0 => Ok(Color::Black),
             1 => Ok(Color::Grey),
             2 => Ok(Color::White),
+            // TODO check if 3, 4, 5 & 8 are correct after we acutally render them.
+            3 => Ok(Color::Yellow),
+            4 => Ok(Color::Green),
+            5 => Ok(Color::Pink),
             6 => Ok(Color::Blue),
             7 => Ok(Color::Red),
+            8 => Ok(Color::GrayOverlapping),
             _ => Err(Error::UnknownColor(color_i)),
         }
     }
@@ -422,6 +431,10 @@ pub struct LayerColor {
     pub white: String,
     pub blue: String,
     pub red: String,
+    pub yellow: String,
+    pub green: String,
+    pub pink: String,
+    pub gray_overlapping: String,
 }
 
 impl Default for LayerColor {
@@ -432,6 +445,10 @@ impl Default for LayerColor {
             white: "white".to_string(),
             blue: "#0062cc".to_string(),
             red: "#d90707".to_string(),
+            yellow: "#ffffcc".to_string(),
+            green: "#9999ff".to_string(),
+            pink: "#ffff33".to_string(),
+            gray_overlapping: "#999999".to_string(),
         }
     }
 }

@@ -55,6 +55,10 @@ pub fn line_to_css_color(line: &Line, layer_idx: usize, layer_colors: &[LayerCol
             Color::White => layer_colors.white,
             Color::Blue => layer_colors.blue,
             Color::Red => layer_colors.red,
+            Color::Yellow => layer_colors.yellow,
+            Color::Green => layer_colors.green,
+            Color::Pink => layer_colors.pink,
+            Color::GrayOverlapping => layer_colors.gray_overlapping,
         },
     }
 }
