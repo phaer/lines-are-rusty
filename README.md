@@ -1,3 +1,6 @@
+**Note:** This work-in-progress fork lets us read files with the colors
+added in mid-2022, but does not yet render them correctly.
+
 # Lines Are Rusty
 
 Re-implementation of https://github.com/ax3l/lines-are-beautiful in Rust.
